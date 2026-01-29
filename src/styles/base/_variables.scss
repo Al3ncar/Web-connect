@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+
+$bg-primary: #205691;
+$bg-secondary: #fd7267;
+$line-shadow: #cbcbcb;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+@mixin flex-evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+@mixin font-source-regular {
+  font-family: "Source Sans 3", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+
+@mixin btn-settings {
+  border: none;
+  border-radius: 0.5vw;
+  cursor: pointer;
+  text-align: center;
+  padding: 3% 3%;
+  font-size: 1vw;
+}
+
+@mixin btn-default {
+  @include btn-settings;
+  background-color: $color-btn;
+  color: #fff;
+  transition: 0.5s;
+
+  a {
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #023026;
+    transform: translateY(-10%);
+    transition: 0.5s;
+  }
+}
+@mixin btn-outline {
+  @include btn-settings;
+  border: solid 1px $color-btn;
+  color: $color-btn;
+  background: transparent;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: #02302607;
+    transform: translateY(-10%);
+    transition: 0.5s;
+  }
+}
