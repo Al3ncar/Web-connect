@@ -8,7 +8,7 @@ const Header = () => {
   const [isOpenMenu, setOpenMenu] = useState(false);
 
   return (
-    <section className="header-container">
+    <header className="header-container">
       <img src={Ilogo} alt="Icone de mão segurando um coração de desenho" />
       <nav>
         <ul>
@@ -27,15 +27,18 @@ const Header = () => {
             alt="Icone de perfil do Igor Alencar"
           />
         </button>
-        {isOpenMenu && (
-          <ul className="header-container--profile__menu">
-            {menuDropdown.map((item) => (
-              <li>{item.title}</li>
-            ))}
-          </ul>
-        )}
       </div>
-    </section>
+
+      {isOpenMenu && (
+        <ul className="header-container--profile__menu"> 
+          {menuDropdown.map((item) => (
+            <Link to={item.toLocal} key={item.id}>
+              <li>{item.title}</li>
+            </Link>
+          ))}
+        </ul>
+      )}
+    </header>
   );
 };
 

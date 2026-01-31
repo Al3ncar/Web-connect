@@ -1,0 +1,81 @@
+@use "../../base/_variables.scss" as V;
+
+.header-container {
+  @include V.flex-between;
+  background-color: V.$bg-primary;
+  // padding: 1% 0;
+  position: relative;
+
+  img {
+    padding-left: 5%;
+    width: 10%;
+  }
+
+  nav {
+    width: 50%;
+    @include V.flex-end;
+    ul {
+      @include V.flex-around;
+      width: 90%;
+      list-style: none;
+      text-decoration: none;
+      a {
+        @include V.font-source-regular;
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+  }
+
+  &--profile {
+    @include V.flex-center;
+    width: 17%;
+    margin-right: 1%;
+    padding-right: 3%;
+    margin: 0.5% 0;
+    position: relative;
+
+    button {
+      width: 29%;
+      // margin: 1% 0;
+      overflow: hidden;
+      border-radius: 50%;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      img {
+        border-radius: 50%;
+        width: 100%;
+      }
+    }
+
+    &__menu {
+      width: 15%;
+      padding-bottom: 1%;
+      background-color: V.$bg-primary;
+      list-style: none;
+      text-decoration: none;
+      position: absolute;
+      top: 100%;
+      right: 4%;
+
+      a {
+        width: 100%;
+        @include V.font-source-regular;
+        text-decoration: none;
+        color: #fff;
+
+        li {
+          width: 100%;
+          padding: 3% 10%;
+        }
+
+        &:hover {
+          li {
+            box-shadow: 0px 0.05vw 0.05vw V.$line-shadow;
+          }
+        }
+      }
+    }
+  }
+}
