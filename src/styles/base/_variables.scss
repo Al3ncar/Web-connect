@@ -1,7 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
 $bg-primary: #205691;
 $bg-secondary: #fd7267;
+$bg-thready: #278733;
 $line-shadow: #cbcbcb;
 
 @mixin flex-center {
@@ -29,11 +30,21 @@ $line-shadow: #cbcbcb;
   justify-content: end;
   align-items: center;
 }
+@mixin flex-start {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
 
 @mixin font-source-regular {
   font-family: "Source Sans 3", sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1.3vw;
+}
+@mixin font-inter-regular {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.3vw;
 }
 
 @mixin btn-settings {
@@ -41,15 +52,16 @@ $line-shadow: #cbcbcb;
   border-radius: 0.5vw;
   cursor: pointer;
   text-align: center;
-  padding: 3% 3%;
+  padding: 2% 8%;
   font-size: 1vw;
 }
 
 @mixin btn-default {
   @include btn-settings;
-  background-color: $color-btn;
+  background-color: $bg-primary;
   color: #fff;
   transition: 0.5s;
+  font-size: 1.3vw;
 
   a {
     color: #fff;
@@ -61,10 +73,25 @@ $line-shadow: #cbcbcb;
     transition: 0.5s;
   }
 }
+@mixin btn-square {
+  @include flex-between;
+  @include font-source-regular;
+
+  font-weight: 600;
+  padding: 1% 2%;
+  width: 20%;
+  color: #fff;
+  border: none;
+
+  p {
+    width: 100%;
+    margin-right: 2%;
+  }
+}
 @mixin btn-outline {
   @include btn-settings;
-  border: solid 1px $color-btn;
-  color: $color-btn;
+  border: solid 1px $bg-primary;
+  color: $bg-primary;
   background: transparent;
   transition: 0.5s;
 
