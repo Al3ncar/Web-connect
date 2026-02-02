@@ -1,0 +1,278 @@
+@use "../../base/variables" as V;
+
+.about {
+  @include V.flex-center;
+  min-height: 90vh;
+  &-me {
+    @include V.flex-center;
+    @include V.font-inter-regular;
+    width: 84%;
+    padding: 3%;
+    border: solid 0.1vw #efeeea;
+    border-radius: 1vw;
+
+    &__profile {
+      width: 50%;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      margin-left: 5%;
+
+      h1 {
+        font-family: "Inter", sans-serif;
+        font-size: 3vw;
+      }
+
+      span {
+        font-family: "Inter", sans-serif;
+        color: V.$bg-thready;
+      }
+
+      p {
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        margin: 3% 0 2% 0;
+        font-size: 1.2vw;
+      }
+
+      ul {
+        width: 65%;
+        @include V.flex-start;
+        list-style: none;
+
+        li {
+          @include V.flex-start;
+          width: 100%;
+          align-items: center;
+          text-wrap-mode: nowrap;
+
+          img {
+            width: 10%;
+            margin-right: 2%;
+          }
+
+          p {
+            width: auto;
+            font-size: 1vw;
+          }
+        }
+      }
+
+      &__badges {
+        width: 100%;
+        margin-top: 3%;
+        @include V.flex-start;
+      }
+    }
+  }
+}
+
+@media (max-width: 1224px) {
+  .about-me {
+    &__profile {
+      width: 60%;
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      h1 {
+        font-size: 4vw;
+      }
+
+      span {
+        font-size: 1.8vw;
+      }
+
+      p {
+        font-size: 1.5vw;
+      }
+
+      ul {
+        width: 85%;
+        li {
+          p {
+            font-size: 1.3vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 824px) {
+  .about-me {
+    flex-direction: column;
+    margin: 10% 0;
+    border: none;
+    &__profile {
+      width: 60%;
+      margin-bottom: 5%;
+    }
+
+    &__content {
+      @include V.flex-center;
+      flex-direction: column;
+      h1 {
+        font-size: 5vw;
+      }
+
+      span {
+        font-size: 2.5vw;
+      }
+
+      p {
+        text-align: center;
+        font-size: 2.5vw;
+      }
+
+      ul {
+        width: 95%;
+        margin-top: 2%;
+        flex-direction: column;
+        li {
+          @include V.flex-center;
+
+          img {
+            width: 5%;
+          }
+          p {
+            font-size: 2vw;
+          }
+        }
+      }
+
+      &__badges {
+        margin-top: 4%;
+        @include V.flex-center;
+      }
+    }
+  }
+}
+@media (max-width: 524px) {
+  .about-me {
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 10% 0;
+    border: none;
+    &__profile {
+      width: 80%;
+    }
+
+    &__content {
+      @include V.flex-center;
+      flex-direction: column;
+      h1 {
+        font-size: 6.5vw;
+      }
+
+      span {
+        font-size: 3.5vw;
+        margin-bottom: 2%;
+      }
+
+      p {
+        text-align: center;
+        font-size: 3.5vw;
+      }
+
+      ul {
+        width: 98%;
+        margin-top: 2%;
+        flex-direction: column;
+        li {
+          @include V.flex-center;
+
+          img {
+            width: 6%;
+          }
+          p {
+            font-size: 3.5vw;
+          }
+        }
+      }
+
+      &__badges {
+        @include V.flex-center;
+        margin-top: 4%;
+
+        div {
+          border-radius: 1.5vw;
+          p {
+            font-size: 2.7vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 424px) {
+  .about-me {
+    min-height: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 180px) {
+  .about-me {
+    width: 95%;
+    &__profile {
+      width: 90%;
+    }
+    
+    &__content {
+      h1 {
+        font-size: 12vw;
+      }
+      
+      span {
+        font-size: 7vw;
+        margin-bottom: 6%;
+      }
+      
+      p {
+        width: 100%;
+        font-size: 6vw;
+        margin-bottom: 6%;
+      }
+
+      ul {
+        width: 100%;
+        margin-top: 2%;
+        flex-direction: column;
+        li {
+          @include V.flex-center;
+
+          img {
+            width: 10%;
+            margin-bottom: 3%;
+          }
+          p {
+            font-size:6vw;
+          }
+        }
+      }
+
+      &__badges {
+        @include V.flex-center;
+        flex-direction: column;
+        gap: 4%;
+
+        div {
+          width: 80%;
+          border-radius: 5vw;
+          margin: 2%;
+          p {
+            font-size: 5vw;
+          }
+        }
+      }
+    }
+  }
+}
