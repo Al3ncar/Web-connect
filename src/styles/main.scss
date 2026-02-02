@@ -1,2 +1,9 @@
 @use "./base/reset";
-@use "./components/layouts/header/header.scss";
+
+@use "./components/layouts/header.scss";
+@use "./components/layouts/footer.scss";
+@use "./components/layouts/home.scss";
+@use "./components/layouts/about.scss";
+
+@use "./components/ui/sections.scss";
+@use "./components/ui/card.module.scss";
