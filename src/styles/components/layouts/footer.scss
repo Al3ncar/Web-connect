@@ -1,0 +1,42 @@
+@use "../../base/variables" as V;
+
+footer {
+  @include V.flex-center;
+  @include V.font-inter-regular;
+  background-color: #e9eff4;
+  padding: 1% 0;
+  text-align: center;
+  font-size: 1.2vw;
+}
+
+@media (max-width: 1024px) {
+  footer {
+    font-size: 1.8vw;
+  }
+}
+@media (max-width: 824px) {
+  footer {
+    font-size: 2vw;
+
+    p {
+      @include V.flex-center;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 624px) {
+  footer {
+    padding: 2% 0;
+    font-size: 2.7vw;
+  }
+}
+@media (max-width: 180px) {
+  footer {
+    padding: 4% 0;
+    font-size: 5vw;
+    p {
+      width: 95%;
+    }
+  }
+}
