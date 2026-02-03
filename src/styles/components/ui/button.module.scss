@@ -1,0 +1,17 @@
+@use "../../base/variables" as v;
+
+.btn_default {
+  @include v.btn-default;
+}
+.btn_outline {
+  @include v.btn-outline;
+}
+.btn_square {
+  @include v.btn-square;
+  background-color: v.$bg-primary;
+}
+
+.btn_square_secondary {
+  @include v.btn-square;
+  background-color: v.$bg-secondary;
+}
