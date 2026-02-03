@@ -1,0 +1,11 @@
+@use "../../base/variables" as V;
+
+.badge {
+  width: auto;
+  background-color: #d4e7d6;
+  text-align: center;
+  padding: 1% 2%;
+  margin-right: 3%;
+  border-radius: 1vw;
+  color: V.$bg-thready;
+}
