@@ -1,0 +1,299 @@
+@use "../../base/variables" as V;
+
+.login {
+  @include V.flex-between;
+  height: 100vh;
+  img {
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__box {
+    width: 40%;
+    padding: 8%;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-family: "Dancing Script", cursive;
+      font-weight: bolder;
+      font-size: 6vw;
+      color: V.$bg-secondary;
+    }
+
+    label {
+      font-size: 1.1vw;
+      text-align: left;
+      color: V.$bg-primary;
+    }
+
+    input {
+      width: 100%;
+      margin: 3% 0;
+      padding: 4%;
+      font-size: 1.1vw;
+      border-radius: 1vw;
+      border: 0.1vw solid V.$line-shadow;
+      outline: none;
+      &:focus {
+        border-color: V.$bg-primary;
+      }
+    }
+
+    &__btn {
+      @include V.flex-center;
+      gap: 5%;
+
+      button {
+        padding: 4% 6%;
+        font-size: 1vw;
+        border-radius: 0.5vw;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease;
+        background: V.$bg-primary;
+        color: white;
+        &:hover {
+          opacity: 0.85;
+        }
+
+        &.primary {
+          width: 40%;
+        }
+      }
+
+      a {
+        width: 54%;
+        button {
+          font-size: 1vw;
+          border-radius: 0.5vw;
+          border: none;
+          cursor: pointer;
+          transition: 0.3s ease;
+          background: V.$bg-primary;
+          color: white;
+          &.secondary {
+            padding: 7% 14%;
+            background: transparent;
+            color: V.$bg-primary;
+            border: 1px solid V.$bg-primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .login {
+    img {
+      width: 50%;
+      object-position: 30%;
+    }
+
+    &__box {
+      width: 50%;
+
+      label {
+        font-size: 1.4vw;
+      }
+
+      input {
+        font-size: 1.4vw;
+      }
+
+      &__btn {
+        button {
+          font-size: 1.6vw;
+        }
+        a button {
+          &.secondary {
+            padding: 7% 10%;
+          }
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 824px) {
+  .login {
+    flex-direction: column-reverse;
+    img {
+      width: 100%;
+      height: 50vh;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    &__box {
+      width: 100%;
+
+      h1 {
+        font-size: 9vw;
+      }
+
+      label {
+        font-size: 2.6vw;
+      }
+
+      input {
+        padding: 3%;
+        font-size: 2vw;
+        border-radius: 2vw;
+      }
+
+      &__btn {
+        button {
+          padding: 2% 4%;
+          font-size: 2vw;
+        }
+        a button {
+          &.secondary {
+            width: 100%;
+            padding: 3.45% 0%;
+          }
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 724px) {
+  .login {
+    &__box {
+      @include V.flex-center;
+      width: 100%;
+      height: 50vh;
+      h1 {
+        width: 100%;
+        font-size: 9vw;
+      }
+
+      label {
+        width: 100%;
+        font-size: 2.6vw;
+      }
+
+      input {
+        width: 100%;
+        padding: 3%;
+        font-size: 2vw;
+        border-radius: 2vw;
+      }
+
+      &__btn {
+        width: 100%;
+        button {
+          padding: 2% 4%;
+          font-size: 2vw;
+        }
+        a button {
+          &.secondary {
+            width: 100%;
+            padding: 3.45% 0%;
+          }
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 524px) {
+  .login {
+    img {
+      height: 65vh;
+    }
+    &__box {
+      @include V.flex-center;
+      width: 100%;
+      height: 35vh;
+      h1 {
+        width: 100%;
+        font-size: 12vw;
+      }
+
+      label {
+        width: 100%;
+        font-size: 3vw;
+      }
+
+      input {
+        width: 100%;
+        padding: 3%;
+        font-size: 3vw;
+        border-radius: 2vw;
+      }
+
+      &__btn {
+        width: 100%;
+        button {
+          padding: 2% 4%;
+          font-size: 3vw;
+          border-radius: 1vw;
+        }
+        a button {
+          font-size: 3vw;
+          border-radius: 1vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 180px) {
+  .login {
+    height: 100%;
+    img {
+      height: 65vh;
+    }
+    &__box {
+      @include V.flex-center;
+      width: 100%;
+      height: 79vh;
+      h1 {
+        width: 100%;
+        font-size: 17vw;
+      }
+
+      label {
+        width: 100%;
+        font-size: 5vw;
+      }
+
+      input {
+        width: 100%;
+        padding: 3%;
+        font-size: 5vw;
+        border-radius: 2vw;
+      }
+
+      &__btn {
+        width: 100%;
+        flex-direction: column;
+        margin-top: 5%;
+        button {
+
+          &.primary{
+            width: 90%;
+          }
+          width: 100%;
+          padding: 4% 5%;
+          font-size: 5vw;
+          border-radius: 1vw;
+        }
+        a{
+          width: 90%;
+          button {
+          width: 100%;
+          font-size: 5vw;
+          border-radius: 1vw;
+
+          &.secondary{
+            width: 100%;
+          }}
+        }
+      }
+    }
+  }
+}
