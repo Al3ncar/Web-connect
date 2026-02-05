@@ -1,0 +1,223 @@
+@use "../../base/variables" as V;
+
+.home {
+  @include V.flex-between;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+  min-height: 90vh;
+  align-items: flex-start;
+
+  img {
+    width: 55%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 53%;
+    display: none;
+  }
+
+  &--page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-height: 95vh;
+    color: V.$bg-primary;
+    padding: 5% 0 3% 2%;
+    background-image: url("../../../assets/banner/all-hands.png");
+    background-repeat: no-repeat;
+    background-position: 43vw;
+    background-size: contain;
+
+    h1 {
+      width: 50%;
+      margin-top: 5%;
+      font-size: 6vw;
+    }
+
+    &--parg {
+      @include V.font-inter-regular;
+      width: 48%;
+      font-size: 1.6vw;
+      margin: 1% 0 2% 0;
+    }
+
+    button {
+      margin-top: 2%;
+      width: 21%;
+      padding: 1% 2%;
+    }
+
+    &--cards {
+      @include V.flex-between;
+      width: 37%;
+
+      aside {
+        margin: 11% 0;
+        h2 {
+          font-size: 3vw;
+          text-align: center;
+        }
+        p {
+          font-size: 1vw;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .home--page {
+    background-position: 49vw;
+
+    h1 {
+      width: 55%;
+      font-size: 7vw;
+    }
+
+    button {
+      width: 30%;
+      font-size: 1.8vw;
+    }
+
+    &--parg {
+      width: 60%;
+      font-size: 2vw;
+    }
+
+    &--cards {
+      width: 55%;
+      aside {
+        h2 {
+          font-size: 4.5vw;
+        }
+        p {
+          font-size: 1.6vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 824px) {
+  .home {
+    @include V.flex-between;
+    flex-direction: column;
+
+    img {
+      width: 60%;
+      border-radius: 35%;
+      display: grid;
+    }
+
+    &--page {
+      @include V.flex-center;
+      min-height: auto;
+      background-image: none;
+
+      h1 {
+        width: 70%;
+        font-size: 8vw;
+        text-align: center;
+        margin-bottom: 5%;
+      }
+
+      button {
+        width: 50%;
+        font-size: 3vw;
+        padding: 2% 4%;
+      }
+
+      &--parg {
+        width: 90%;
+        text-align: center;
+        font-size: 3vw;
+      }
+
+      &--cards {
+        width: 75%;
+        aside {
+          h2 {
+            font-size: 6vw;
+          }
+          p {
+            font-size: 2vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 524px) {
+  .home {
+    img {
+      width: 80%;
+    }
+
+    &--page {
+      h1 {
+        width: 90%;
+        font-size: 11vw;
+      }
+
+      button {
+        width: 70%;
+        font-size: 4vw;
+      }
+
+      &--parg {
+        width: 100%;
+        text-align: center;
+        font-size: 3.2vw;
+        margin-bottom: 5%;
+      }
+
+      &--cards {
+        width: 85%;
+        aside {
+          h2 {
+            font-size: 8vw;
+          }
+          p {
+            font-size: 3vw;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 424px) {
+  .home {
+    min-height: 95vh;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 180px) {
+  .home {
+    &--page {
+      button {
+        width: 90%;
+        font-size: 6vw;
+      }
+
+      &--parg {
+        font-size: 5vw;
+      }
+
+      &--cards {
+        width: 95%;
+        aside {
+          h2 {
+            font-size: 10vw;
+          }
+          p {
+            text-align: center;
+            font-size: 4vw;
+          }
+        }
+      }
+    }
+  }
+}
