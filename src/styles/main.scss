@@ -4,6 +4,9 @@
 @use "./components/layouts/footer.scss";
 @use "./components/layouts/home.scss";
 @use "./components/layouts/about.scss";
+@use "./components/layouts/login.scss";
 
 @use "./components/ui/sections.scss";
 @use "./components/ui/card.module.scss";
+@use "./components/ui/confirm-modal.scss";
+@use "./components/ui/notification.scss";

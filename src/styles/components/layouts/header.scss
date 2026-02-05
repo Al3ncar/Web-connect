@@ -3,7 +3,6 @@
 .header-container {
   @include V.flex-between;
   background-color: V.$bg-primary;
-  // padding: 1% 0;
   position: relative;
 
   img {
@@ -12,10 +11,10 @@
   }
 
   nav {
-    width: 50%;
+    width: 55%;
     @include V.flex-end;
     ul {
-      @include V.flex-around;
+      @include V.flex-center;
       width: 90%;
       list-style: none;
       text-decoration: none;
@@ -23,6 +22,18 @@
         @include V.font-source-regular;
         text-decoration: none;
         color: #fff;
+        padding: 3% 6%;
+        transition: all 0.2s;
+
+        &:hover {
+          background-color: V.$bg-secondary;
+          transition: all 0.2s;
+          font-weight: bolder;
+
+          li {
+            transform: scale(1.1);
+          }
+        }
       }
     }
   }
@@ -36,8 +47,8 @@
     position: relative;
 
     button {
+      @include V.flex-center;
       width: 29%;
-      // margin: 1% 0;
       overflow: hidden;
       border-radius: 50%;
       border: none;
@@ -51,29 +62,192 @@
 
     &__menu {
       width: 15%;
-      padding-bottom: 1%;
       background-color: V.$bg-primary;
       list-style: none;
       text-decoration: none;
       position: absolute;
       top: 100%;
       right: 4%;
+      z-index: 1000;
 
       a {
-        width: 100%;
         @include V.font-source-regular;
+        width: 100%;
         text-decoration: none;
         color: #fff;
 
         li {
           width: 100%;
           padding: 3% 10%;
-        }
-
-        &:hover {
-          li {
-            box-shadow: 0px 0.05vw 0.05vw V.$line-shadow;
+          
+          &:hover {
+            background-color: V.$bg-secondary;
+            transition: all 0.2s;
+            font-weight: bolder;
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-container {
+    padding: 1%;
+
+    img {
+      width: 12%;
+    }
+
+    nav {
+      ul {
+        a {
+          font-size: 1.8vw;
+        }
+      }
+    }
+
+    &--profile {
+      button {
+        width: 40%;
+      }
+
+      &__menu {
+        width: 15%;
+        right: 3%;
+
+        a {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 824px) {
+  .header-container {
+    padding: 1%;
+    img {
+      width: 12%;
+    }
+    nav {
+      width: 70%;
+      ul {
+        a {
+          font-size: 2vw;
+        }
+      }
+    }
+
+    &--profile {
+      button {
+        width: 50%;
+      }
+
+      &__menu {
+        width: 20%;
+        right: 1%;
+        a {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 724px) {
+  .header-container {
+    padding: 1%;
+    img {
+      width: 14%;
+    }
+    nav {
+      width: 65%;
+      ul {
+        a {
+          font-size: 3vw;
+        }
+      }
+    }
+
+    &--profile {
+      button {
+        width: 60%;
+      }
+    }
+  }
+}
+@media (max-width: 624px) {
+  .header-container {
+    padding: 1%;
+    img {
+      width: 14%;
+    }
+    nav {
+      width: 50%;
+      ul {
+        a {
+          font-size: 3vw;
+        }
+      }
+    }
+
+    &--profile {
+      width: 20%;
+      margin-right: 5%;
+
+      button {
+        width: 60%;
+      }
+
+      &__menu {
+        width: 65%;
+        right: 4%;
+        a {
+          font-size: 6vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 524px) {
+  .header-container {
+    padding: 2% 2% 2% 5%;
+    img {
+      width: 18%;
+    }
+    &--profile {
+      margin-right: 6%;
+
+      button {
+        width: 90%;
+      }
+      &__menu {
+        width: 75%;
+        right: 4%;
+        a {
+          font-size: 6vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 180px) {
+  .header-container {
+    padding: 2% 2% 2% 5%;
+    img {
+      width: 18%;
+    }
+    &--profile {
+      margin-right: 6%;
+
+      button {
+        width: 100%;
+      }
+
+      &__menu {
+        width: 85%;
+        right: 7%;
+        a {
+          font-size: 6vw;
         }
       }
     }

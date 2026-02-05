@@ -51,7 +51,6 @@
       font-size: 1vw;
       opacity: 0.85;
       padding: 3% 1% 5% 5%;
-      // margin-bottom: 20px;
     }
 
     &__actions {
@@ -108,6 +107,107 @@
       &__actions {
         .btn {
           font-size: 1.5vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 824px) {
+  .confirm-overlay {
+    .confirm-modal {
+      width: 65%;
+
+      &__header {
+        h3 {
+          font-size: 3vw;
+        }
+
+        button {
+          font-size: 3vw;
+        }
+      }
+
+      p {
+        font-size: 2.7vw;
+      }
+
+      &__actions {
+        .btn {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 524px) {
+  .confirm-overlay {
+    .confirm-modal {
+      width: 75%;
+
+      &__header {
+        h3 {
+          font-size: 4.5vw;
+        }
+
+        button {
+          font-size: 5vw;
+        }
+      }
+
+      p {
+        font-size: 3.5vw;
+      }
+
+      &__actions {
+        width: 95%;
+        @include V.flex-between;
+        .btn {
+          width: 50%;
+          font-size: 3.5vw;
+          border-radius: 1.5vw;
+          padding: 3% 5%;
+          margin-top: 3%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 180px) {
+  .confirm-overlay {
+    .confirm-modal {
+      width: 90%;
+
+      &__header {
+        h3 {
+          font-size: 6vw;
+        }
+
+        button {
+          padding-top: 2%;
+          font-size: 7vw;
+        }
+      }
+
+      p {
+        font-size: 5.5vw;
+        text-align: center;
+      }
+
+      &__actions {
+        @include V.flex-between;
+        width: 95%;
+        flex-direction: column;
+
+        .btn {
+          width: 95%;
+          font-size: 5vw;
+          border-radius: 2vw;
+          padding: 3% 5%;
+          margin-top: 3%;
+
+          &.cancel {
+            margin-right: 0;
+          }
         }
       }
     }
