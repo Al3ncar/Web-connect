@@ -10,11 +10,11 @@ A aplicação foi pensada para transmitir **empatia, confiança e profissionalis
 
 A plataforma tem como principais objetivos:
 
-* Dar visibilidade a projetos sociais
-* Apresentar informações claras, acessíveis e organizadas
-* Inspirar engajamento e transformação social
-* Facilitar a conexão entre voluntários, organizações e apoiadores
-* Utilizar o design como ferramenta para transmitir confiança e impacto social
+- Dar visibilidade a projetos sociais
+- Apresentar informações claras, acessíveis e organizadas
+- Inspirar engajamento e transformação social
+- Facilitar a conexão entre voluntários, organizações e apoiadores
+- Utilizar o design como ferramenta para transmitir confiança e impacto social
 
 O time de frontend foi responsável por construir essa solução com foco em **experiência do usuário**, **responsividade** e **arquitetura organizada**.
 
@@ -24,22 +24,19 @@ O time de frontend foi responsável por construir essa solução com foco em **e
 
 ### ✅ Tecnologias Obrigatórias
 
-* **React.js**
+- **React.js**
+  - Projeto criado utilizando React
+  - Componentização reutilizável (Header, Footer, Cards, etc.)
+  - Código limpo e organizado
 
-  * Projeto criado utilizando React
-  * Componentização reutilizável (Header, Footer, Cards, etc.)
-  * Código limpo e organizado
+- **React Router DOM**
+  - Gerenciamento de rotas da aplicação
+  - Rotas centralizadas em um arquivo dedicado
 
-* **React Router DOM**
-
-  * Gerenciamento de rotas da aplicação
-  * Rotas centralizadas em um arquivo dedicado
-
-* **SCSS (Sass)**
-
-  * Uso de variáveis para cores, fontes e espaçamentos
-  * Aninhamento de seletores
-  * Estrutura modular de estilos
+- **SCSS (Sass)**
+  - Uso de variáveis para cores, fontes e espaçamentos
+  - Aninhamento de seletores
+  - Estrutura modular de estilos
 
 ---
 
@@ -47,63 +44,36 @@ O time de frontend foi responsável por construir essa solução com foco em **e
 
 As seguintes rotas foram implementadas:
 
-| Rota            | Descrição                                                |
-| --------------- | -------------------------------------------------------- |
-| `/`             | Página inicial com apresentação da plataforma e projetos |
-| `/Doacao`       | Página de doações                                        |
-| `/Voluntariado` | Página para escolha de projetos para voluntariado        |
-| `/Mentoria`     | Página para projetos de mentoria                         |
-| `/EventosEP`    | Página de eventos e palestras                            |
-| `/Usuario`      | Página de perfil do usuário                              |
-
----
-
-## 📁 Estrutura de Pastas
-
-```
-src/
- ├─ components/
- │   ├─ Header/
- │   ├─ Footer/
- │   ├─ CardProjeto/
- │   └─ CardVoluntario/
- ├─ pages/
- │   ├─ Home/
- │   ├─ Doacao/
- │   ├─ Voluntariado/
- │   ├─ Mentoria/
- │   ├─ EventosEP/
- │   └─ Usuario/
- ├─ styles/
- │   ├─ variables.scss
- │   ├─ global.scss
- │   └─ mixins.scss
- ├─ routes/
- │   └─ index.jsx
- ├─ App.jsx
- └─ main.jsx
-```
-
----
+| Rota          | Descrição                                                |
+| ------------- | -------------------------------------------------------- |
+| `/`           | Página inicial com apresentação da plataforma e projetos |
+| `/donation`   | Página de doações                                        |
+| `/volunteer`  | Página para escolha de projetos para voluntariado        |
+| `/mentorship` | Página para projetos de mentoria                         |
+| `/events`     | Página de eventos e palestras                            |
+| `/about`      | Página de perfil do usuário                              |
 
 ## 🎨 Design
+
+| Pagina inicial                                        | Tela de login                                       |
+| ----------------------------------------------------- | --------------------------------------------------- |
+| ![Texto Alternativo](./src/assets/banner/connect.png) | ![Texto Alternativo](./src/assets/banner/login.png) |
 
 ### 🎨 Paleta de Cores
 
 As cores foram escolhidas para transmitir:
 
-* 💙 **Confiança e tecnologia**
-* 🧡 **Impacto social e esperança**
-* 🤍 **Simplicidade e acessibilidade**
+- 💙 **Confiança e tecnologia**
+- 🧡 **Impacto social e esperança**
+- 🤍 **Simplicidade e acessibilidade**
 
 ### ✍️ Tipografia
 
-* Fonte principal: **Inter** ou **Source Sans 3** (Google Fonts)
-* Estilo:
-
-  * Moderno
-  * Suave
-  * Fácil leitura
+- Fonte principal: **Inter** ou **Source Sans 3** (Google Fonts)
+- Estilo:
+  - Moderno
+  - Suave
+  - Fácil leitura
 
 ---
 
@@ -111,15 +81,16 @@ As cores foram escolhidas para transmitir:
 
 A aplicação é totalmente responsiva, utilizando:
 
-* Unidades relativas (`%`, `vh`, `vw`, `rem`)
-* `max-width`
-* Media queries
+- Unidades relativas (`%`, `vh`, `vw`, `rem`)
+- `max-width`
+- Media queries
 
 Compatível com:
 
-* Desktop
-* Tablets
-* Smartphones
+- Desktop
+- Tablets
+- Smartphones
+- SmartWatch
 
 ---
 
@@ -127,9 +98,9 @@ Compatível com:
 
 Não é permitido o uso de:
 
-* Frameworks CSS (Bootstrap, Tailwind, etc.)
-* Bibliotecas de UI prontas
-* Plugins externos de layout
+- Frameworks CSS (Bootstrap, Tailwind, etc.)
+- Bibliotecas de UI prontas
+- Plugins externos de layout
 
 ---
 
@@ -137,11 +108,11 @@ Não é permitido o uso de:
 
 Funcionalidades extras implementáveis:
 
-* Animações suaves com CSS
-* Componentes altamente reutilizáveis
-* Simulação de dados de projetos sociais
-* Página de projetos nos quais o usuário se voluntariou
-* Página de configurações de conta
+- Animações suaves com CSS
+- Componentes altamente reutilizáveis
+- Simulação de dados de projetos sociais
+- Página de projetos nos quais o usuário se voluntariou
+- Página de configurações de conta
 
 ---
 
@@ -153,11 +124,11 @@ Funcionalidades extras implementáveis:
 
 Ao desenvolver esta plataforma, são praticadas habilidades essenciais do mercado moderno de frontend:
 
-* Organização de código
-* Componentização
-* Roteamento
-* Estilização profissional
-* Responsividade
+- Organização de código
+- Componentização
+- Roteamento
+- Estilização profissional
+- Responsividade
 
 Agora é sua vez.
 Construa uma plataforma que una **tecnologia e propósito**.
