@@ -3,11 +3,11 @@ import IIcon2 from "../assets/icon/icon-2.png";
 import IIcon3 from "../assets/icon/icon-3.png";
 import { Badge } from "../components/badge/badge";
 
-const About = () => {
+const About = ({ imgProfile, userName, bio, location, login }) => {
   const dataBadge = [
-    { key: 0, label: "Tecnologia" },
-    { key: 1, label: "Tecnologia" },
-    { key: 2, label: "Tecnologia" },
+    { key: 0, label: "Empatia" },
+    { key: 1, label: "Ajuda" },
+    { key: 2, label: "Disponibilidade" },
     { key: 3, label: "Tecnologia" },
   ];
 
@@ -15,32 +15,24 @@ const About = () => {
     <section className="about">
       <section className="about-me">
         <div className="about-me__profile">
-          <img
-            src="https://github.com/Al3ncar.png"
-            alt="Imagem do perfil Igor Alencar"
-          />
+          <img src={imgProfile} alt={`Imagem de perfil ${userName}`} />
         </div>
         <div className="about-me__content">
-          <h1>Igor Alencar</h1>
+          <h1>{userName}</h1>
           <span>Voluntario Ativo</span>
 
-          <p>
-            Apaixonado por fazer a diferença na comunidade. Acredito que
-            pequenas ações podem transformar vidas e estou sempre em busca de
-            novas oportunidades para ajudar.
-          </p>
-
+          <p>{bio}</p>
           <ul>
             <li>
-              <img src={IIcon1} alt="" />
-              <p>São Paulo, SP</p>
+              <img src={IIcon3} alt="" />
+              <p>{location}</p>
             </li>
             <li>
               <img src={IIcon2} alt="" />
-              <p>igor@gmail.com</p>
+              <p>{login}@gmail.com</p>
             </li>
             <li>
-              <img src={IIcon3} alt="" />
+              <img src={IIcon1} alt="" />
               <p>Membro desde Janeiro 2022</p>
             </li>
           </ul>
