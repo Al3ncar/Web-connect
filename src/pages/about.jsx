@@ -23,14 +23,18 @@ const About = ({ imgProfile, userName, bio, location, login }) => {
 
           <p>{bio}</p>
           <ul>
-            <li>
-              <img src={IIcon3} alt="" />
-              <p>{location}</p>
-            </li>
-            <li>
-              <img src={IIcon2} alt="" />
-              <p>{login}@gmail.com</p>
-            </li>
+            {location && (
+              <li>
+                <img src={IIcon3} alt="" />
+                <p>{location}</p>
+              </li>
+            )}
+            {login && (
+              <li>
+                <img src={IIcon2} alt="" />
+                <p>{login}@gmail.com</p>
+              </li>
+            )}
             <li>
               <img src={IIcon1} alt="" />
               <p>Membro desde Janeiro 2022</p>
