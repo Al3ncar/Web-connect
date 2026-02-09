@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <section className="home">
       <section className="home--page">
-        <h1>Projetos Sociais que transformam </h1>
+        <h1>Projetos Sociais que <span></span></h1>
         <p className="home--page--parg">
           Conectamos sua empresa com projetos sociais impactantes. Juntos,
           criamos mudanças reais na comunidade.
@@ -25,5 +25,5 @@ const HomePage = () => {
     </section>
   );
 };
-
+                          
 export default HomePage;
