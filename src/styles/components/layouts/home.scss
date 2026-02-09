@@ -26,13 +26,36 @@
     padding: 5% 0 3% 2%;
     background-image: url("../../../assets/banner/all-hands.png");
     background-repeat: no-repeat;
-    background-position: 43vw;
+    background-position: 45vw;
     background-size: contain;
 
     h1 {
       width: 50%;
       margin-top: 5%;
       font-size: 6vw;
+
+      span {
+        position: relative;
+
+        &::before {
+          content: "";
+          color: V.$bg-secondary;
+          animation: changeText 16s infinite;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 100%;
+          width: calc(100% + 1vw);
+          border-left: solid V.$bg-secondary 0.4vw;
+          right: -3%;
+          animation:
+            cursor 0.8s infinite,
+            seeText 16s infinite;
+          background-color: #fff;
+        }
+      }
     }
 
     &--parg {
@@ -46,6 +69,28 @@
       margin-top: 2%;
       width: 21%;
       padding: 1% 2%;
+      position: relative;
+      transition: all 2s;
+      cursor: pointer;
+      p,
+      svg {
+        z-index: 999;
+      }
+
+      &::before {
+        content: "";
+        width: 0%;
+        height: 100%;
+        background-color: rgba(0, 30, 255, 0.622);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      &:hover {
+        &::before {
+          animation: btn-size ease-in-out forwards 0.9s;
+        }
+      }
     }
 
     &--cards {
@@ -54,6 +99,8 @@
 
       aside {
         margin: 11% 0;
+        transition: all 0.5s;
+
         h2 {
           font-size: 3vw;
           text-align: center;
@@ -61,14 +108,77 @@
         p {
           font-size: 1vw;
         }
+
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+          transition: all 0.5s;
+        }
       }
     }
+  }
+}
+@keyframes btn-size {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes seeText {
+  10%,
+  15%,
+  30%,
+  35%,
+  50%,
+  55%,
+  70%,
+  75%,
+  90%,
+  95% {
+    width: 0;
+  }
+
+  5%,
+  20%,
+  25%,
+  40%,
+  45%,
+  60%,
+  65%,
+  80%,
+  85% {
+    width: calc(100% + 1vw);
+  }
+}
+@keyframes cursor {
+  0% {
+    border-left: solid #fff 0.4vw;
+  }
+}
+@keyframes changeText {
+  0%,
+  20% {
+    content: "transformam";
+  }
+  40% {
+    content: "melhoram";
+  }
+  60% {
+    content: "mudam";
+  }
+  80% {
+    content: "ensinam";
+  }
+  100% {
+    content: "expiram";
   }
 }
 
 @media (max-width: 1024px) {
   .home--page {
-    background-position: 49vw;
+    background-position: 50vw;
 
     h1 {
       width: 55%;
